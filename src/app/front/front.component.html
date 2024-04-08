@@ -1,0 +1,39 @@
+<div class="main"> 
+    <div class="container">
+        <div class="title">Calculator</div>
+        <div class="display">
+            <input type="text" #box (keyup.enter)="calvalue(box.value)" [(ngModel)]="toshow" name="display"></div>
+        <div class="row">
+            <div class="row1">
+                <button type="button" (click)="cls()" class="func">C</button>
+                <button type="button" (click)="writetoinput('%')" class="func">%</button>
+                <button type="button" (click)="back()" class="del">X</button>
+                <button type="button" (click)="writetoinput('/')" class="func">/</button>
+            </div>
+            <div class="row2">
+                <button type="button" (click)="writetoinput('7')" class="numb">7</button>
+                <button type="button" (click)="writetoinput('8')" class="numb">8</button>
+                <button type="button" (click)="writetoinput('9')" class="numb">9</button>
+                <button type="button" (click)="writetoinput('*')" class="func">*</button>
+            </div>
+            <div class="row3">
+                <button type="button" (click)="writetoinput('4')" class="numb">4</button>
+                <button type="button" (click)="writetoinput('5')" class="numb">5</button>
+                <button type="button" (click)="writetoinput('6')" class="numb">6</button>
+                <button type="button" (click)="writetoinput('-')" class="func">-</button>
+            </div>
+            <div class="row4">
+                <button type="button" (click)="writetoinput('1')" class="numb">1</button>
+                <button type="button" (click)="writetoinput('2')" class="numb">2</button>
+                <button type="button" (click)="writetoinput('3')" class="numb">3</button>
+                <button type="button" (click)="writetoinput('+')" class="func">+</button>
+            </div>
+            <div class="row5">
+                <button type="button" (click)="writetoinput('00')" class="numb">00</button>
+                <button type="button" (click)="writetoinput('0')" class="numb">0</button>
+                <button type="button" (click)="writetoinput('.')" class="numb">.</button>
+                <button type="button" (click)="equals()" class="eqal">=</button>
+            </div>
+        </div>
+    </div>
+</div>
